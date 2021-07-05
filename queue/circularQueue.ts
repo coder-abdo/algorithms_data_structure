@@ -58,7 +58,7 @@ class CircularQueue<T> {
     if (this.head === this.tail) {
       this.head = this.tail = 0;
     }
-    this.head++;
+    this.head = (this.head + 1) % this.capacity;
     this.size--;
     return removedHead;
   }
